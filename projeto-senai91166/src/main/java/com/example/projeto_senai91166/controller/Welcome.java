@@ -8,8 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 
 public class Welcome {
-    @GetMapping
+    @GetMapping("/welcome")
     public String welcome() {
         return "Bem-vindo ao projeto.";
+    }
+
+    @GetMapping("/lanchonetes")
+    public String lanchonetes(){
+        return "Rei dos Burgers - Rei dos Burgers";
     }
 }
