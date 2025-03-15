@@ -5,9 +5,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/") //Toma como referência o primeiro @GetMapping()
 
 public class Welcome {
+
+    @GetMapping()
+    public String inicio(){
+        return "Página inicial!";
+    }
+
     @GetMapping("/welcome")
     public String welcome() {
         return "Bem-vindo ao projeto.";
